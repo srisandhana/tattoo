@@ -1,0 +1,462 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root{
+  --white: #fff;
+  --sitered:#df0024;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input, textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section, time {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  background: var(--white);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  margin: 0; /* Added to remove default body margin */
+}
+
+header {
+  position: relative;
+  padding: 0 2rem;
+  height: 50rem;
+  background-color: #0000001f;
+  padding: 28px 0 164px;
+  position: relative;
+  width: 100%;
+  background: url(images/banner.png) no-repeat center 0;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.navbar {
+  width: 100%;
+  /* height: 116px; */
+    padding: 1rem 10rem;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent; /* Set initial background color */
+  transition: background-color 0.3s ease; /* Add a smooth transition effect for background color */
+}
+
+.navbar.sticky {
+  background-color: rgb(0 0 0 / 58%); /* Set the background color when sticky */
+}
+
+.navbar .logo a {
+  color: var(--white);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.navbar .nav ul {
+  display: flex;
+  gap: 0.9rem;
+  /* align-items: center; */
+  margin-left: auto;
+  margin-right: 0;
+  flex-direction: column;
+}
+
+.navbar .nav ul .cnt-info a i{
+  font-weight: 900;
+  color: var(--sitered);
+  background: var(--white);
+  padding: 6px;
+  border-radius: 25px;
+  margin: 0px 6px;
+}
+
+.navbar .nav ul .cnt-info{
+  color: var(--white);
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-end;  
+}
+
+.navbar .nav ul .cnt-info button{
+  padding: 8px 17px 7px;
+  width: 141px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  background: var(--sitered);
+  color: var(--white);
+  font-size: 15px;
+}
+
+.navbar .nav ul div a i{
+    font-weight: 900;
+    color: var(--sitered);
+    background: var(--white);
+    padding: 6px;
+    border-radius: 25px;
+    margin: 0px 6px;
+}
+
+.navbar .nav ul .menu-list{
+    display: flex;
+    /* gap: 2rem; */
+    align-items: center;
+    margin-left: auto;
+    margin-right: 0;
+    color: var(--white);
+    font-size: 17px;
+}
+
+.navbar .nav ul .menu-list li a{
+  padding: 8px 25px;
+}
+.navbar .nav ul .menu-list li a:hover{
+  background-color: #df002459;
+    border: ridge;
+    border-radius: 10px;
+}
+
+.navbar .menu {
+  color: var(--white);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.navbar .highlight {
+  display: block;
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+.highlight {
+  background-color: #0ef;
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2s ease;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.highlight:hover {
+  transform: scale(1.05);
+  color: #000;
+}
+
+.highlight:active {
+  transform: scale(0.95);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 60px;
+  width: 250px;
+  height: 0;
+  background: rgb(0 0 0 / 58%);
+  backdrop-filter: blur(15px);
+  /* border-radius: 10px; */
+  overflow: hidden;
+  display: none;
+}
+
+.dropdown-menu ul .cnt-info{
+  color: var(--white);
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dropdown-menu ul .cnt-info button{
+  padding: 8px 17px 7px;
+  width: 141px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  background: var(--sitered);
+  color: var(--white);
+  font-size: 15px;
+}
+
+.dropdown-menu ul div a i{
+    font-weight: 900;
+    color: var(--sitered);
+    background: var(--white);
+    padding: 6px;
+    border-radius: 25px;
+    margin: 0px 6px;
+}
+
+.dropdown-menu ul .menu-list{
+    display: flex;
+    /* gap: 2rem; */
+    align-items: center;
+    margin-left: auto;
+    margin-right: 0;
+    color: var(--white);
+    font-size: 18px;
+    flex-direction: column;
+}
+
+.dropdown-menu ul .menu-list li a{
+  padding: 8px 25px;
+}
+.dropdown-menu ul .menu-list li a:hover{
+  background-color: #df002459;
+    border: ridge;
+    border-radius: 10px;
+}
+
+.dropdown-menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-menu .highlight {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown-menu.open {
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  left: 0; 
+  right: 0;
+}
+
+.container {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+height: 100vh;
+background-color: transparent;
+}
+
+.banner-cnt{
+  color: #fff;
+  padding: 16rem 10rem 0rem 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+.banner-cnt div h1{
+  font-size: 40px;
+}
+.banner-cnt div h2{
+  font-size: 30px;
+    border: 1px solid #fff;
+    padding: 5px 5px;
+}
+
+/* Nav Bar Ends */
+
+/* Responsive */
+
+@media (max-width: 992px) {
+  .navbar .nav ul {
+      display: none;
+  }
+  
+  .navbar .menu {
+      display: flex;
+  }
+  
+  .navbar .menu i {
+      display: inline-block;
+  }
+  
+  .navbar .highlight {
+      display: none;
+  }
+  
+  .dropdown-menu {
+      display: block;
+      /* padding: 19px 0px; */
+  }
+  
+  .dropdown-menu .highlight {
+      display: block;
+      margin-top: 1rem;
+  }
+  header {
+    padding: 0px 0px 164px;
+    background-size: auto;
+  }
+  .navbar {
+    background-color: var(--sitered);
+    padding: 10px 15px;
+  }
+  .dropdown-menu ul .cnt-info {
+    padding-top: 20px;
+}
+}
+
+/* header {
+  background: #2980b9;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav .navbar {
+  max-width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+nav .navbar .logo a {
+  color: var(--white);
+  font-size: 27px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+nav .navbar .menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navbar .menu li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+.navbar .menu li a {
+  color: var(--white);
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+} */
+
+section {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #96c7e8;
+  font-size: 70px;
+}
+
+/* Define the background colors for each section */
+#Home {
+  background: var(--white);
+}
+
+#About {
+  background: #f2f2f2;
+}
+
+#Category {
+  background: #e6e6e6;
+}
+
+#Contact {
+  background: #f2f2f2;
+}
+
+#Feedback {
+  background: #e6e6e6;
+}
+
+footer {
+  background: #2980b9;
+  color: var(--white);
+  text-align: center;
+  padding: 10px;
+  position: relatuve;
+  bottom: 0;
+  width: 100%;
+}
+
+.button a {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: var(--white);
+  background: #2980b9;
+  padding: 7px 12px;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+}

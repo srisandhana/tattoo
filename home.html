@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- Website - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Tatoo</title>
+  <link rel="stylesheet" href="home.css" />
+  <!-- Fontawesome CDN Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <header>
+    <div class="navbar sticky">
+        <div class="logo">
+            <a href="#">Logo</a>
+        </div>
+        <div class="nav">
+            <ul>
+              <div class="cnt-info">
+                <a><i class="fa-solid fa-phone"></i>+91 99999 99999</a>
+                <button>Enquire Now</button>
+              </div>
+              <div class="menu-list">
+                <li><a href="#">Home</a><span>|</span></li>
+                <li><a href="#">About Us</a><span>|</span></li>
+                <li><a href="#">How We Work</a><span>|</span></li>
+                <li><a href="#">Services</a><span>|</span></li>
+                <li><a href="#">FAQ</a></li>
+              </div>
+            </ul>
+            <div class="menu"><i class="fa-solid fa-bars"></i></div>
+        </div>
+        <div class="dropdown-menu">
+          <ul>
+            <div class="cnt-info">
+              <a><i class="fa-solid fa-phone"></i>+91 99999 99999</a>
+              <button>Enquire Now</button>
+            </div>
+            <div class="menu-list">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">How We Work</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">FAQ</a></li>
+            </div>
+          </ul>
+        </div>
+    </div>
+    <div class="banner-cnt">
+      <div>
+        <h1>Lorem Ipsum is simply dummy</h1>
+        <h2>Lorem Ipsum is simply dummy</h2>
+      </div>
+      <div>
+        <button>Know more</button>
+      </div>
+    </div>
+  </header>
+  <section id="Home">Home Section</section>
+  <section id="About">About Section</section>
+  <section id="Category">Category Section</section>
+  <section id="Contact">Contact Section</section>
+  <section id="Feedback">Feedback Section</section>
+
+  <footer>
+    <p>&copy; 2024 CodingLab. All rights reserved.</p>
+  </footer>
+
+  <div class="button">
+    <a href="#Home"><i class="fa-solid fa-arrow-up"></i></a>
+  </div>
+</body>
+
+<script>
+ // Nav Bar
+
+const toggleBtn = document.querySelector('.menu');
+const toggleBtnIcon = toggleBtn.querySelector('i');
+const dropDownMenu = document.querySelector('.dropdown-menu');
+
+toggleBtn.onclick = function () {
+  dropDownMenu.classList.toggle('open');
+  const isOpen = dropDownMenu.classList.contains('open');
+  toggleBtnIcon.classList.toggle('fa-bars', !isOpen);
+  toggleBtnIcon.classList.toggle('fa-xmark', isOpen);
+};
+
+// Nav Bar Ends
+
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', function () {
+  const scrollPosition = window.scrollY;
+
+  if (scrollPosition > navbar.offsetHeight) {
+    navbar.classList.add('sticky');
+  } else {
+    navbar.classList.remove('sticky');
+  }
+});
+</script>
+
+</html>
