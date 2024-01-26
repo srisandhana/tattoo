@@ -41,6 +41,7 @@ footer, header, menu, nav, section, time {
 body {
   line-height: 1;
   background: var(--white);
+  font-family: 'Poppins', sans-serif;
 }
 
 a {
@@ -71,10 +72,13 @@ body {
   margin: 0; /* Added to remove default body margin */
 }
 
+img{
+  max-width: 100%;
+}
+
 header {
-  position: relative;
   padding: 0 2rem;
-  height: 50rem;
+  height: 59rem;
   background-color: #0000001f;
   padding: 28px 0 164px;
   position: relative;
@@ -93,7 +97,7 @@ header {
 .navbar {
   width: 100%;
   /* height: 116px; */
-    padding: 1rem 10rem;
+    padding: 2rem 12rem;
   /* max-width: 1200px; */
   margin: 0 auto;
   display: flex;
@@ -112,8 +116,10 @@ header {
 
 .navbar .logo a {
   color: var(--white);
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 2.8rem;
+  font-weight: 500; /* Medium weight */
+  font-style: italic; /* Italic style */
+  font-family: 'Gelasio', sans-serif; /* Set font-family for the logo */
 }
 
 .navbar .nav ul {
@@ -311,20 +317,41 @@ height: 100vh;
 background-color: transparent;
 }
 
+/* banner styles */
+
 .banner-cnt{
   color: #fff;
-  padding: 16rem 10rem 0rem 10rem;
+  padding: 20rem 12rem 0rem 12rem;
   display: flex;
   flex-direction: column;
   gap: 70px;
 }
 .banner-cnt div h1{
   font-size: 40px;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: -1px;
 }
 .banner-cnt div h2{
-  font-size: 30px;
-    border: 1px solid #fff;
-    padding: 5px 5px;
+  font-size: 22px;
+  border: 4px solid #fff;
+  padding: 10px 25px;
+  width: fit-content;
+  margin-top: 0.8rem;
+  width: 29rem;
+  font-family: 'Myriad Pro', sans-serif;
+}
+.banner-cnt div button{
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  background: var(--sitered);
+  color: var(--white);
+  font-size: 22px;
+  padding: 20px 50px;
+  border: 0px solid var(--white);
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
 }
 
 /* Nav Bar Ends */
@@ -368,6 +395,22 @@ background-color: transparent;
   .dropdown-menu ul .cnt-info {
     padding-top: 20px;
 }
+
+/* banner media */
+.banner-cnt {
+  padding: 10rem 0rem 0rem 2rem;
+}
+.banner-cnt div h2 {
+  font-size: 14px;
+  width: 20rem;
+}
+.banner-cnt div h1 {
+  font-size: 30px;
+}
+.banner-cnt div button {
+  font-size: 16px;
+  padding: 12px 34px;
+}
 }
 
 /* header {
@@ -408,7 +451,7 @@ nav .navbar .menu {
   text-decoration: none;
 } */
 
-section {
+/* section {
   display: flex;
   height: 100vh;
   width: 100%;
@@ -416,15 +459,89 @@ section {
   justify-content: center;
   color: #96c7e8;
   font-size: 70px;
-}
+} */
 
 /* Define the background colors for each section */
-#Home {
-  background: var(--white);
+.about {
+  background: #fffaf7;
+  /* display: flex; */
+  height: auto;
+  width: 100%;
+  /* align-items: center;
+  justify-content: center; */
+  color: #fffaf7;
+  /* position: relative; */
+  width: 100%;
+  background: url(images/shape_16.png) no-repeat center 0;
+  background-position: bottom left;
+}
+.about .hand{
+  display: flex;
+  justify-content: center;
+}
+.about h1{
+  font-size: 3.2rem;
+  color: #5b5b5b;
+  font-family: 'Gelasio';
+  font-weight: 600;
+  text-align: center;
+  margin: 20px 0px;
+}
+.about .abt-section{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+  gap: 15px;
+}
+.about .abt-section div .exp-about{
+  color: #000;
+  max-width: 100%;
+  height: 25rem;
+  background-color: #fc0e0e;
+  padding: 35px;
+}
+.about .abt-section .tatoo-inject{
+  width: 39%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-#About {
-  background: #f2f2f2;
+/* Services page */
+#Services {
+  background: #fffaf7;
+}
+
+.services {
+  background: #fffaf7;
+  /* display: flex; */
+  height: auto;
+  width: 100%;
+  /* align-items: center;
+  justify-content: center; */
+  color: #000;
+  /* position: relative; */
+  width: 100%;
+  background: url(images/shape_16.png) no-repeat center 0;
+  background-position: bottom left;
+}
+.services h1{
+  font-size: 3.2rem;
+  color: #5b5b5b;
+  font-family: 'Gelasio';
+  font-weight: 600;
+  text-align: center;
+  margin: 20px 0px;
+}
+.services p{
+  font-size: 1.2rem;
+  color: #5b5b5b;
+  font-family: 'Lato';
+  font-weight: 200;
+  text-align: center;
+  margin: 20px 0px;
+  padding: 0rem 17rem;
+  line-height: 1.8;
 }
 
 #Category {
