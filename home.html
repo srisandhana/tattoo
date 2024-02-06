@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Website - www.codingnepalweb.com -->
 <html lang="en" dir="ltr">
 
 <head>
@@ -14,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DMSerifDisplay&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <style>
     @font-face {
   font-family: 'DMSerifDisplay';
@@ -90,9 +90,8 @@
       </div>
     </div>
   </section>
-
   <section class="services" id="Services">
-    <div class="ellipse-7-copy"></div>
+    <div class="ellipse"></div>
     <div>
       <h1>Our Services</h1>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</p>
@@ -152,20 +151,87 @@
   
       </div> 
     </div>
-    
     <div class="dots-wrapper">
       <button class="dot active"></button>
       <button class="dot"></button>
     </div>
-    
-    
-
   </section>
-
-
-  <section id="Category">Category Section</section>
-  <section id="Contact">Contact Section</section>
-  <section id="Feedback">Feedback Section</section>
+  <section class="category" id="Category">
+    <h1>Change Starts Here.</h1>
+    <div class="categorylist">
+      <div  >
+        <img src="images/tatoo3.jpg" alt="">
+        <img src="images/tatoo4.jpg" alt="">
+      </div>
+      <div>
+        <img src="images/tatoo5.jpg" alt="">
+      </div>
+    </div>
+  </section>
+  <section id="Video">
+    <iframe width="1185" height="618" src="https://www.youtube.com/embed/TP8N1a-edBE?si=4OBGdZFkRgYco1iN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </section>
+  <section id="Testimonial" class="testimonial">
+    <h1>Customers Says</h1>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="card-flex">
+              <div class="testimonial-card">
+              <img src="avatar1.jpg" alt="Avatar" class="avatar">
+              <p class="quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+              <p class="name">John Doe</p>
+              </div>
+              <div class="testimonial-card">
+                  <img src="avatar1.jpg" alt="Avatar" class="avatar">
+                  <p class="quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                  <p class="name">John Doe</p>
+              </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card-flex">
+              <div class="testimonial-card">
+                  <div class="card-cnt">
+                      <img src="images/ellipse_1.png" alt="Avatar" class="avatar">
+                      <div>
+                          <h3>Mr. Karthikeyan</h3>
+                          <p>Software engineer</p>
+                      </div>
+                  </div>
+              
+              <p class="quote">"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, wo"</p>
+              </div>
+              <div class="testimonial-card">
+                  <img src="avatar1.jpg" alt="Avatar" class="avatar">
+                  <p class="quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                  <p class="name">John Doe</p>
+              </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <img src="avatar3.jpg" alt="Avatar" class="avatar">
+            <p class="quote">"Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque eget ipsum et nunc luctus consequat."</p>
+            <p class="name">Alex Johnson</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </section>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    });
+</script>
 
   <footer>
     <p>&copy; 2024 CodingLab. All rights reserved.</p>
@@ -250,4 +316,5 @@ dots.forEach((dot, idx) => {
   });
 });
 </script>
+
 </html>
