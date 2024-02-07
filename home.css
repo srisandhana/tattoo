@@ -779,7 +779,7 @@ footer {
   bottom: 20px;
   right: 20px;
   color: var(--white);
-  background: #2980b9;
+  background: var(--sitered);
   padding: 7px 12px;
   font-size: 18px;
   border-radius: 6px;
