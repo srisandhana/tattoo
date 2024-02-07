@@ -489,12 +489,12 @@ background-color: transparent;
   color: #e53d52;
   font-weight: 600;
   font-family: 'Lato';
+  cursor: pointer;
 }
-.about .abt-section .tatoo-inject a:hover{
+/* .about .abt-section .tatoo-inject a:hover{
   border-bottom: 3px solid #e53d52;
-  /* color: var(--white); */
   width: max-content;
-}
+} */
 
 
 
