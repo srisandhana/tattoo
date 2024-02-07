@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <style>
     @font-face {
   font-family: 'DMSerifDisplay';
@@ -177,43 +178,80 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="card-flex">
-              <div class="testimonial-card">
-              <img src="avatar1.jpg" alt="Avatar" class="avatar">
-              <p class="quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
-              <p class="name">John Doe</p>
+            <div class="testimonial-card">
+              <div class="card-cnt">
+                  <img src="images/testimonial1.png" alt="Avatar" class="avatar">
+                  <div>
+                      <h3>Mr. Karthikeyan</h3>
+                      <p>Software engineer</p>
+                  </div>
               </div>
-              <div class="testimonial-card">
-                  <img src="avatar1.jpg" alt="Avatar" class="avatar">
-                  <p class="quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
-                  <p class="name">John Doe</p>
+          
+              <p class="quote">"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, wo"</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="card-cnt">
+                  <img src="images/testimonial2.png" alt="Avatar" class="avatar">
+                  <div>
+                      <h3>Ms. Priya</h3>
+                      <p>Software engineer</p>
+                  </div>
               </div>
+          
+              <p class="quote">"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem p into electronic typesetting, remaining essentially unchanged."</p>
+            </div>
           </div>
         </div>
         <div class="swiper-slide">
           <div class="card-flex">
-              <div class="testimonial-card">
-                  <div class="card-cnt">
-                      <img src="images/ellipse_1.png" alt="Avatar" class="avatar">
-                      <div>
-                          <h3>Mr. Karthikeyan</h3>
-                          <p>Software engineer</p>
-                      </div>
+            <div class="testimonial-card">
+              <div class="card-cnt">
+                  <img src="images/testimonial1.png" alt="Avatar" class="avatar">
+                  <div>
+                      <h3>Mr. Karthikeyan</h3>
+                      <p>Software engineer</p>
                   </div>
-              
+              </div>
+          
               <p class="quote">"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, wo"</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="card-cnt">
+                  <img src="images/testimonial2.png" alt="Avatar" class="avatar">
+                  <div>
+                      <h3>Ms. Priya</h3>
+                      <p>Software engineer</p>
+                  </div>
               </div>
-              <div class="testimonial-card">
-                  <img src="avatar1.jpg" alt="Avatar" class="avatar">
-                  <p class="quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
-                  <p class="name">John Doe</p>
-              </div>
+          
+              <p class="quote">"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem p into electronic typesetting, remaining essentially unchanged."</p>
+            </div>
           </div>
         </div>
         <div class="swiper-slide">
-          <div class="testimonial-card">
-            <img src="avatar3.jpg" alt="Avatar" class="avatar">
-            <p class="quote">"Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque eget ipsum et nunc luctus consequat."</p>
-            <p class="name">Alex Johnson</p>
+          <div class="card-flex">
+            <div class="testimonial-card">
+              <div class="card-cnt">
+                  <img src="images/testimonial1.png" alt="Avatar" class="avatar">
+                  <div>
+                      <h3>Mr. Karthikeyan</h3>
+                      <p>Software engineer</p>
+                  </div>
+              </div>
+          
+              <p class="quote">"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, wo"</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="card-cnt">
+                  <img src="images/testimonial2.png" alt="Avatar" class="avatar">
+                  <div>
+                      <h3>Ms. Priya</h3>
+                      <p>Software engineer</p>
+                  </div>
+              </div>
+          
+              <p class="quote">"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem p into electronic typesetting, remaining essentially unchanged."</p>
+            </div>
           </div>
         </div>
       </div>
@@ -221,18 +259,6 @@
     </div>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </section>
-  <script>
-    var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    });
-</script>
-
   <footer>
     <p>&copy; 2024 CodingLab. All rights reserved.</p>
   </footer>
@@ -316,5 +342,15 @@ dots.forEach((dot, idx) => {
   });
 });
 </script>
-
+<script>
+  var swiper = new Swiper('.swiper-container', {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  });
+</script>
 </html>

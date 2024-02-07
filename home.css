@@ -658,7 +658,7 @@ background-color: transparent;
   background: #fffaf7;
   height: auto;
   width: 100%;
-  margin: 0px 0px 60px 0px;
+  margin: 0px 0px 100px 0px;
 }
 .testimonial h1{
   font-size: 3.2rem;
@@ -670,12 +670,13 @@ background-color: transparent;
 }
 .testimonial-card {
   background: #fffaf7;
-  padding: 20px;
+  padding: 50px 35px;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 500px;
-  height: 200px;
+  width: 570px;
+  height: auto;
+  overflow: hidden;
 }
 .swiper-slide .card-flex{
     display: flex;
@@ -692,13 +693,18 @@ background-color: transparent;
 }
 
 .avatar {
-  width: 100px;
+  width: 130px;
   border-radius: 50%;
 }
 
 .quote {
-  font-style: italic;
-  margin-top: 10px;
+  font-style: normal;
+    margin-top: 20px;
+    line-height: 1.4;
+    text-align: center;
+    font-size: 14px;
+    color: #5f5858;
+    font-weight: 500;
 }
 
 .name {
@@ -713,20 +719,39 @@ background-color: transparent;
 
 .swiper-pagination .swiper-pagination-bullet {
     width: 30px;
-    height: 10px;
-  background-color: #ccc;
-  opacity: 0.5;
-  border-radius: 43px;
-  margin: 0 5px;
+    height: 7px;
+    background-color: #ccc;
+    opacity: 0.5;
+    border-radius: 43px;
+    margin: 0 5px;
 }
 
 .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #333;
+  background-color: var(--sitered);
   opacity: 1;
 }
 .swiper-container {
   overflow: hidden; /* Hide vertical scrollbar */
   cursor: grab;
+}
+
+.card-cnt >div > h3{
+  font-size: 23px;
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 900;
+  color: var(--sitered);
+  margin-bottom: 6px;
+}
+.card-cnt >div > p{
+  font-size: 14px;
+  font-weight: 600;
+  color: #5f5858;
+}
+.card-cnt >div{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 
